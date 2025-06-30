@@ -6,27 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Cihuyyy</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        .container {
+            @apply max-w-5xl;
+        }
+    </style>
 </head>
 
 <body>
     <!-- Navigas -->
     <nav>
-        <div class="container mx-auto flex items-center justify-between py-1">
+        <div class="px-6 container mx-auto flex items-center justify-between py-1">
             <a href="" class="w-50"><img src="./img/navbar-1.png" alt="Logo"></a>
-            <div class="space-x-6 font-semibold">
+            <div class="hidden md:inline space-x-6 font-semibold">
                 <a class="hover:text-gray-400" href="">Pricing</a>
                 <a class="hover:text-gray-400" href="">Product</a>
                 <a class="hover:text-gray-400" href="">About Us</a>
                 <a class="hover:text-gray-400" href="">Career</a>
                 <a class="hover:text-gray-400" href="">Community</a>
             </div>
-            <button class="hover:text-gray-400 bg-green-400 text-white px-4 py-2 rounded-3xl">Create Account</button>
+            <button class="hidden md:inline hover:text-gray-400 bg-green-400 text-white px-4 py-2 rounded-3xl">Create
+                Account</button>
+            <img src="img/icon-hamburger.svg" alt="icon-hamburger" class="hamburger md:hidden">
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden">
+            <div class="menu absolute top-16 container hidden flex-col bg-white shadow-md inset-x-0 mx-auto px-6 py-5">
+                <a class="hover:text-gray-400" href="">Pricing</a>
+                <a class="hover:text-gray-400" href="">Product</a>
+                <a class="hover:text-gray-400" href="">About Us</a>
+                <a class="hover:text-gray-400" href="">Career</a>
+                <a class="hover:text-gray-400" href="">Community</a>
+                <a class="hover:text-gray-400" href="">Create Account</a>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="px-6 container mx-auto flex justify-between items-center my-6 space-x-6">
-        <div class="w-3/6">
+    <section class="px-6 container mx-auto md:flex md:justify-between items-center my-6 space-x-6">
+        <div class="md:w-3/6 text-center md:text-left">
             <h4 class="text-3xl font-bold">New Feature</h4>
             <h3 class="text-7xl font-bold mb-5">Coming Up With Fresh Ideas</h3>
             <p class="text-purple-700 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente magnam
@@ -34,13 +52,14 @@
             <button class="hover:text-gray-400 bg-green-400 text-white px-4 py-2 rounded-3xl">Create Account</button>
         </div>
         <div>
-            <img class="w-180" src="./img/HeroSec-1.png" alt="?Figure Hero-Section">
+            <img class="md:w-180" src="./img/HeroSec-1.png" alt="?Figure Hero-Section">
         </div>
     </section>
 
     <!-- Partner -->
     <section class="bg-gray-100 p-10 my-5">
-        <div class="container mx-auto flex justify-around items-center max-w-5xl">
+        <div
+            class="container mx-auto grid grid-cols-2 gap-5 justify-items-center md:flex md:justify-around items-center max-w-5xl">
             <img class="w-32" src="./img/flutter.png" alt="">
             <img class="w-32" src="./img/laravel.png" alt="">
             <img class="w-32" src="./img/next.js.png" alt="">
@@ -50,9 +69,9 @@
     </section>
 
     <!-- Statistic -->
-    <section class="container mx-auto space-x-6 flex justify-between items-center my-10">
-        <img src="./img/statistik.png" class="w-140" alt="Statistic Figure">
-        <div class="w-200 mb-6">
+    <section class="container mx-auto space-x-6 md:flex md:justify-between items-center my-10">
+        <img src="./img/statistik.png" class="w-3/4 md:w-140 mx-auto" alt="Statistic Figure">
+        <div class="md:w-200 mb-6 text-center md:text-left">
             <h4 class="text-xl font-bold">Statistic</h4>
             <h3 class="text-3xl font-bold mb-5">What We Can Do For You</h3>
             <p class="text-purple-700 mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur
@@ -85,23 +104,23 @@
     <section class="container mx-auto p-10 my-10 text-center">
         <h4 class="text-xl font-bold">Testimonies</h4>
         <h3 class="text-3xl font-bold mb-5 ">What They Say About Us</h3>
-        <div class="flex justify-between mt-16 space-x-8 ">
+        <div class="md:flex md:justify-between mt-16 space-x-8 ">
             <!-- Person 1 -->
-            <div class="bg-gray-100 w-1/3 rounded-md border border-gray-200">
+            <div class="bg-gray-100 md:w-1/3 rounded-md border border-gray-200">
                 <img class="w-16 rounded-full mx-auto -mt-8" src="./img/person.png" alt="Person Figure">
                 <h5 class="font-bold pt-5">Ahmad Soleh</h5>
                 <p class="p-5 text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi
                     repellat vitae.</p>
             </div>
             <!-- Person 2 -->
-            <div class="bg-gray-100 w-1/3 rounded-md border border-gray-200">
+            <div class="hidden md:inline bg-gray-100 w-1/3 rounded-md border border-gray-200">
                 <img class="w-16 rounded-full mx-auto -mt-8" src="./img/person.png" alt="Person Figure">
                 <h5 class="font-bold pt-5">Ahmad Kasim</h5>
                 <p class="p-5 text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi
                     repellat vitae.</p>
             </div>
             <!-- Person 3 -->
-            <div class="bg-gray-100 w-1/3 rounded-md border border-gray-200">
+            <div class="hidden md:inline bg-gray-100 w-1/3 rounded-md border border-gray-200">
                 <img class="w-16 rounded-full mx-auto -mt-8" src="./img/person.png" alt="Person Figure">
                 <h5 class="font-bold pt-5">Komang Dwi</h5>
                 <p class="p-5 text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi
@@ -113,6 +132,51 @@
     </section>
 
     <!-- Footer -->
+    <section
+        class="px-6 container mx-auto sm:grid sm:grid-cols-2 md:grid-cols-3 lg:flex lg:justify-between bg-top bg-no-repeat pb-10  text-gray-500"
+        style="background-image: url('img/footer.png');">
+        <div class="mb-4">
+            <img src="./img/navbar-1.png" alt="Logo" class="w-32">
+            <p class="mt-5">Hallo@gmail.com <br> (01234)4356789</p>
+        </div>
+        <div class="mb-4">
+            <h4 class="font-bold text-xl mb-4">About Us</h4>
+            <ul class="space-y-2">
+                <li><a href="">Support Center</a></li>
+                <li><a href="">Customer Support</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">History</a></li>
+            </ul>
+        </div>
+        <div class="mb-4">
+            <h4 class="font-bold text-xl mb-4">Resource</h4>
+            <ul class="space-y-2">
+                <li><a href="">Support Center</a></li>
+                <li><a href="">Customer Support</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">History</a></li>
+            </ul>
+        </div>
+        <div class="mb-4">
+            <h4 class="font-bold text-xl mb-4">Company</h4>
+            <ul class="space-y-2">
+                <li><a href="">Support Center</a></li>
+                <li><a href="">Customer Support</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">History</a></li>
+            </ul>
+        </div>
+        <div class="mb-4">
+            <h4 class="font-bold text-xl mb-4">Privcy Policy</h4>
+            <ul class="space-y-2">
+                <li><a href="">Support Center</a></li>
+                <li><a href="">Customer Support</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">History</a></li>
+            </ul>
+        </div>
+    </section>
+    <script src="javascript/main.js"></script>
 </body>
 
 </html>
